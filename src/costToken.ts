@@ -5,6 +5,12 @@ import { keccak256, pack } from '@ethersproject/solidity';
 import { BigNumber } from './utils/bignumber';
 import { BONE } from './bmath';
 
+// UniswapV2Factory address
+// Sokol: 0xb19f968c9f74690EC4076Fcde90587dFae02c039
+// xDai: 0xA818b4F111Ccac7AA31D0BCc0806d64F2E0737D7
+// Kovan: 0x92FacdfB69427CffC1395a7e424AeA91622035Fc
+// Alfajores: 0x00Be915B9dCf56a3CBE739D9B9c202ca692409EC
+// Celo: 0x00Be915B9dCf56a3CBE739D9B9c202ca692409EC
 const FACTORY_ADDRESS = '0xA818b4F111Ccac7AA31D0BCc0806d64F2E0737D7';
 const INIT_CODE_HASH =
     '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f';
@@ -44,7 +50,8 @@ export async function getTokenWeiPrice(
     TokenAddr: string,
     provider: BaseProvider
 ): Promise<BigNumber> {
-    const WETH = '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1';
+    // WXDAI on XDAI
+    const WETH = '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d';
     if (TokenAddr.toLowerCase() === WETH.toLowerCase())
         return new BigNumber(BONE);
 
