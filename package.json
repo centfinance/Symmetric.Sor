@@ -1,6 +1,6 @@
 {
     "name": "@centfinance/sor_xdai",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "license": "GPL-3.0-only",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
