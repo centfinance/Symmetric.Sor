@@ -51,7 +51,7 @@ export async function getTokenWeiPrice(
     provider: BaseProvider
 ): Promise<BigNumber> {
     // WXDAI on XDAI
-    const WETH = '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d';
+    const WETH = '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1';
     if (TokenAddr.toLowerCase() === WETH.toLowerCase())
         return new BigNumber(BONE);
 
