@@ -655,7 +655,7 @@ export function getMarketSpotPrice(paths: Path[]): BigNumber {
     let marketSp = bnum(paths[0].spotPrice);
     for (let i = 1; i < paths.length; i++) {
         let value = bnum(paths[i].slippage);
-        if (value.lt(min)) {
+        if ((value.lt(min) && value.gt(0)) || min == 0) {
             min = value;
             marketSp = bnum(paths[i].spotPrice);
         }
